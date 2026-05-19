@@ -14,7 +14,8 @@ const Banner = () => {
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900">
               Book Your Perfect{" "}
               <span className="text-green-700">Qurbani Animal</span>{" "}
-              Easily
+              Easily From <br />
+              <span className='text-4xl text-green-800'>AL INSAF AGRO FARM</span>
             </h1>
 
             <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">

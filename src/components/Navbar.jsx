@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Navlink from './Navlink';
+import { GiCow } from 'react-icons/gi';
 
 
 const Navbar = () => {
@@ -18,15 +19,17 @@ const Navbar = () => {
         {/* <Link href={'/'}><li>Home</li></Link> */}
         <Navlink href={'/'}>Home</Navlink>
          <Navlink href={''}>All Card</Navlink>
+         <Navlink href={'/about'}>About us</Navlink>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl font-bold"><GiCow className='w-8 h-8 text-green-700'/><span className='text-indigo-950'>AL INSAF</span> <span className='text-green-900'>AGRO FARM</span></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal space-x-3">
        <Navlink href={'/'}>Home</Navlink>
      
       <Navlink href={''}>All Card</Navlink>
+      <Navlink href={'/postcss.config.mjsabout'}>About us</Navlink>
     </ul>
   </div>
   <div className="navbar-end space-x-2">

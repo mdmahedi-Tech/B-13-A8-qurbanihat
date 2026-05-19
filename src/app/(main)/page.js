@@ -14,8 +14,8 @@ export default async function Home() {
   return (
    <>
       <div className='container mx-auto flex justify-between items-center py-6'>
-                <h1>Featured Animals</h1>
-               <Link href={'/allcards'}><button className='btn border border-b-emerald-800'>View All</button></Link>
+                <h1 className="font-bold text-2xl">Featured Animals</h1>
+               <Link href={'/allcards'}><button className='btn border border-green-900'>View All</button></Link>
       </div>
    <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
     {

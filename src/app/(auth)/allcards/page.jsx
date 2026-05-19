@@ -2,6 +2,7 @@
 import { ForHomePage } from '@/components/AllSharedFunc';
 import Image from 'next/image';
 import Link from 'next/link';
+import { TbCoinTaka } from 'react-icons/tb';
 
 
 const AllCardspage = async () => {
@@ -30,11 +31,11 @@ const AllCardspage = async () => {
    </Image>
   </figure>
   <div className="card-body">
-    <h2 className="card-title">{products.name}</h2>
-    <p>{products.breed}</p>
-    <p>{products.weight}KG</p>
-    <div className="card-actions flex justify-between items-center">
-        <p>{products.price}tk</p>
+    <h2 className="card-title font-bold">{products.name}</h2>
+    <p className='font-semibold text-gray-600'>{products.breed}</p>
+    <p className='font-semibold text-gray-600'>{products.weight}KG</p>
+    <div className="card-actions font-bold text-xl text-green-800 flex justify-between items-center">
+        <p className='flex items-center'><TbCoinTaka className='w-7 h-7' />{products.price}</p>
       <Link href={`/details/${products.id}`}><button className="btn btn-primary">view details</button></Link>
     </div>
   </div>

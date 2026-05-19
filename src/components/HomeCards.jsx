@@ -5,10 +5,10 @@ import { FaBangladeshiTakaSign } from 'react-icons/fa6';
 import { TbCurrencyTaka } from 'react-icons/tb';
 
 const HomeCards = ({product}) => {
-  console.log(product.image);
+  // console.log(product.image);
     return (
-        <div>
-         <div className="card bg-base-100 w-75 shadow-sm">
+        <div >
+         <div className="card bg-base-100 w-75 shadow-md">
   <figure>
     <Image
     src={product.image}

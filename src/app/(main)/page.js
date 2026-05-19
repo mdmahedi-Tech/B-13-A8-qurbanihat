@@ -13,11 +13,11 @@ export default async function Home() {
   console.log(products);
   return (
    <>
-      <div className='container mx-auto flex justify-between items-center py-6'>
+      <div className='container mx-auto flex justify-between items-center'>
                 <h1 className="font-bold text-2xl">Featured Animals</h1>
                <Link href={'/allcards'}><button className='btn border border-green-900'>View All</button></Link>
       </div>
-   <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+   <div  className='py-10 my-5 container mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6 justify-center'>
     {
       products.map(product=><HomeCards key={product.id}product={product}></HomeCards>)
     }

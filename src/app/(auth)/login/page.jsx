@@ -18,13 +18,18 @@ const Resgisterpage = () => {
 
     },
 )
-
-    console.log({data,error});
+console.log({data,error});
+    if(error){
+      alert(error.message)
+    }
+    if(data){
+      alert("login successful")
+    }
     
   };
     return (
-        <div  className='my-20 flex justify-center'> 
-                   <Form className="flex w-96 flex-col gap-4 flex justify-center" onSubmit={onSubmit}>
+        <div  className='pt-25 pb-10 flex justify-center'> 
+                   <Form className="card shadow-lg w-96 flex-col gap-4" onSubmit={onSubmit}>
                 
                  <TextField
                    isRequired
@@ -38,7 +43,7 @@ const Resgisterpage = () => {
                    }}
                  >
                    <Label>Email</Label>
-                   <Input placeholder="john@example.com" />
+                   <Input placeholder="enter your email" />
                    <FieldError />
                  </TextField>
                  <TextField

@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
+import { toast } from "react-toastify";
 
 const Loginpage = () => {
     const onSubmit =async (e) => {
@@ -19,6 +20,14 @@ const Loginpage = () => {
 )
 
     console.log({data,error});
+    if(error){
+      alert(error.message)
+     
+    }
+    if(data){
+      alert("signup succesful")
+    //  toast("signup succesful")
+    }
     
   };
     return (

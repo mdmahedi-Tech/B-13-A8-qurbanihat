@@ -4,6 +4,7 @@ import React from 'react';
 import Navlink from './Navlink';
 import { GiCow } from 'react-icons/gi';
 import { authClient } from '@/lib/auth-client';
+import { FaCow, FaUser, FaUserCheck } from 'react-icons/fa6';
 
 
 const Navbar = () => {
@@ -30,13 +31,17 @@ const Navbar = () => {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 py-10 my-10 w-52 p-2 shadow">
-        {/* <Link href={'/'}><li>Home</li></Link> */}
+       
         <Navlink className={'font-semibold'} href={'/'}>Home</Navlink>
-         <Navlink className={'font-semibold'} href={''}>All Animals</Navlink>
+         <Navlink className={'font-semibold'} href={'/allcards'}>All Animals</Navlink>
          <Navlink className={'font-semibold'} href={'/about'}>About us</Navlink>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl font-bold"><GiCow className='w-8 h-8 text-green-700'/><span className='text-indigo-950'>AL INSAF</span> <span className='text-green-900'>AGRO FARM</span></a>
+    {/* gorup name */}
+    <a className="btn btn-ghost sm:text-sm md:text-xl lg:text-xl font-bold">
+     
+    <span className='text-indigo-950'>AL INSAF</span>
+     <span className='text-green-900'>AGRO FARM</span></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal space-x-3">
@@ -47,11 +52,24 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end space-x-2">
-      <div className='text-xm'>{user?.name}</div>
-    <Link href={'/registers'}><button className='btn text-green-900 border border-green-950'>register</button></Link>
+       { user ?(<div className='flex items-center gap-4'>
+        <div className='text-xm font-semibold text-green-800 flex justify-center items-center gap-2'>
+      
+       <FaUser className='flex justify-center items-center text-black sm:w-4 sm:w-4 lg:w-6 lg:h-6'/> 
+       {user?.name}
+        </div>
+        <Link href={''}><button onClick={handlelogout} className='btn bg-gray-400 text-red-700'>
+          logout</button></Link>
+      </div>):
+      (<div className='flex items-center gap-2'>
+        
+          <Link href={'/login'}><button className='btn bg-green-900 text-white'>login</button></Link>
+    <Link href={'/registers'}><button className='btn text-green-900 border border-green-950'>
+      register</button></Link>
+      </div>)}
     
-    <Link href={'/login'}><button className='btn bg-green-900 text-white'>login</button></Link>
-   <Link href={''}><button onClick={handlelogout} className='btn bg-red-500 text-white'>logout</button></Link>
+    
+   
     
   </div>
 </div>

@@ -5,6 +5,7 @@ import Navlink from './Navlink';
 import { GiCow } from 'react-icons/gi';
 import { authClient } from '@/lib/auth-client';
 import { FaCow, FaUser, FaUserCheck } from 'react-icons/fa6';
+import { Avatar } from '@heroui/react';
 
 
 const Navbar = () => {
@@ -35,6 +36,7 @@ const Navbar = () => {
         <Navlink className={'font-semibold'} href={'/'}>Home</Navlink>
          <Navlink className={'font-semibold'} href={'/allcards'}>All Animals</Navlink>
          <Navlink className={'font-semibold'} href={'/about'}>About us</Navlink>
+         <Navlink className={'font-semibold'} href={'/profile'}>Profile</Navlink>
       </ul>
     </div>
     {/* gorup name */}
@@ -49,13 +51,19 @@ const Navbar = () => {
      
       <Navlink className={'font-semibold'} href={'/allcards'}>All Animals</Navlink>
       <Navlink className={'font-semibold'} href={'/about'}>About us</Navlink>
+      <Navlink className={'font-semibold'} href={'/profile'}>Profile</Navlink>
     </ul>
   </div>
   <div className="navbar-end space-x-2">
        { user ?(<div className='flex items-center gap-4'>
         <div className='text-xm font-semibold text-green-800 flex justify-center items-center gap-2'>
       
-       <FaUser className='flex justify-center items-center text-black sm:w-4 sm:w-4 lg:w-6 lg:h-6'/> 
+     {/* avater start */}
+     <Avatar>
+        <Avatar.Image alt="John Doe" src={user?.image} />
+        <Avatar.Fallback>JD</Avatar.Fallback>
+      </Avatar>
+     {/* avater end */}
        {user?.name}
         </div>
         <Link href={''}><button onClick={handlelogout} className='btn bg-gray-400 text-red-700'>

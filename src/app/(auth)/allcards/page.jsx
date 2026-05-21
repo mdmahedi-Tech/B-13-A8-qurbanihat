@@ -17,7 +17,7 @@ const AllCardspage = async () => {
          <div className='py-18 my-5 container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {
                 allproducts.map(products=>{
-                     console.log(products.image)
+                    
                     return <div key={products.id}>
          <div className="card bg-base-100 shadow-sm">
   <figure>
@@ -26,6 +26,7 @@ const AllCardspage = async () => {
    width={300}
    height={300}
    alt='cow pic'
+   className='rounded-xl'
    >
 
    </Image>

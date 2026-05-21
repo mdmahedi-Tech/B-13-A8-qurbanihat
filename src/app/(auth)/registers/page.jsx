@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
+import { redirect } from "next/dist/server/api-utils";
 import { toast } from "react-toastify";
 
 const Loginpage = () => {
@@ -9,13 +10,15 @@ const Loginpage = () => {
     e.preventDefault();
     const name=e.target.name.value;
     const email=e.target.email.value;
+    const image = e.target.image.value;
     const password=e.target.password.value;
 
     const {data,error}=await authClient.signUp.email({
         name,
         email,
+        image,
         password
-
+    
     },
 )
 
@@ -27,6 +30,7 @@ const Loginpage = () => {
     if(data){
       alert("Registration succesful")
     //  toast("signup succesful")
+    
     }
     
   };
@@ -65,6 +69,21 @@ const Loginpage = () => {
         <Label>Email</Label>
         <Input placeholder="john@example.com" />
         <FieldError />
+        {/* email end */}
+        {/* password start */}
+         <TextField
+      
+        name="image"
+        type="url"
+        className={'w-full'}
+        
+        
+      >
+        <Label>image</Label>
+        <Input placeholder="enter your image" />
+        <FieldError />
+      </TextField>
+        {/* pass end */}
       </TextField>
       <TextField
         isRequired

@@ -6,6 +6,18 @@ import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 
 const Resgisterpage = () => {
+
+  const handlegoogle= async ()=>{
+   
+  const data = await authClient.signIn.social({
+    provider: "google",
+
+   
+  });
+console.log("data",data)
+
+  }
+
     const onSubmit =async (e) => {
     e.preventDefault();
     
@@ -84,9 +96,10 @@ console.log({data,error});
                    </Button> */}
                  </div>
                  <span className="text-center text-gray-800 font-semibold text-sm">OR continue with</span>
-                 <button className="btn btn-ghost text-xl"><FcGoogle />Continue with google</button>
+                
                  <p>Don&apos;t have account?<Link href={'/registers'}><span className="text-[14px] text-blue-700">registration here</span></Link></p>
                  </Form>
+                  <button onClick={handlegoogle} className="btn btn-ghost text-xl"><FcGoogle />Continue with google</button>
         </div>
     );
 };

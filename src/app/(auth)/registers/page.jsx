@@ -25,7 +25,7 @@ const Loginpage = () => {
      
     }
     if(data){
-      alert("signup succesful")
+      alert("Registration succesful")
     //  toast("signup succesful")
     }
     
@@ -33,16 +33,17 @@ const Loginpage = () => {
     return (
         <div className='container mx-auto pt-25 pb-10 flex justify-center items-center'>
         <Form className="card shadow-lg w-96 flex-col gap-4 items-center" onSubmit={onSubmit}>
+       <div className="text-center space-y-2">
+        <h1 className="text-2xl font-semibold">Create an Acount</h1>
+        <h3 className="text-sm font-semibold text-gray-700">Register to get started</h3>
+       </div>
      <TextField
         isRequired
         name="name"
         type="text"
-        // validate={(value) => {
-        //   if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
-        //     return "Please enter a valid email address";
-        //   }
-        //   return null;
-        // }}
+        className={'w-full'}
+        
+        
       >
         <Label>name</Label>
         <Input placeholder="enter your name" />
@@ -53,6 +54,7 @@ const Loginpage = () => {
         isRequired
         name="email"
         type="email"
+        className={'w-full'}
         validate={(value) => {
           if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
             return "Please enter a valid email address";
@@ -69,6 +71,7 @@ const Loginpage = () => {
         minLength={8}
         name="password"
         type="password"
+        className={'w-full'}
         validate={(value) => {
           if (value.length < 8) {
             return "Password must be at least 8 characters";
@@ -89,10 +92,10 @@ const Loginpage = () => {
       </TextField>
       <div className="flex gap-2">
         <Button type="submit">
-          {/* <Check /> */}
+          <Check />
           Submit
         </Button>
-        <Button type="reset" variant="secondary">
+        <Button type="reset" variant="danger">
           Reset
         </Button>
       </div>

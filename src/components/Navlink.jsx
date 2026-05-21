@@ -4,12 +4,12 @@ import { usePathname } from 'next/navigation';
 
 import React from 'react';
 
-const Navlink = ({href,children}) => {
+const Navlink = ({href,children,}) => {
     const pathname=usePathname()
     const isActive= href=== pathname;
     console.log('pathename',pathname);
    
-    return <Link href={href} className={`${isActive ? "text-green-700 border-b border-green-950":""}`}>{children}</Link>
+    return <Link href={href} className={`font-bold text-gray-700 ${isActive ? "text-green-700 border-b border-green-950":""}`}>{children}</Link>
        
     
 };

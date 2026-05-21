@@ -2,6 +2,8 @@
 import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
+import Link from "next/link";
+import { FcGoogle } from "react-icons/fc";
 
 const Resgisterpage = () => {
     const onSubmit =async (e) => {
@@ -30,7 +32,10 @@ console.log({data,error});
     return (
         <div  className='pt-25 pb-10 flex justify-center'> 
                    <Form className="card shadow-lg w-96 flex-col gap-4" onSubmit={onSubmit}>
-                
+                   <div>
+                    <h1 className="text-2xl text-center font-semibold">WELCOME BACK!</h1>
+                    <h3 className="text-sm text-gray-700 text-center font-semibold">login to your account</h3>
+                   </div>
                  <TextField
                    isRequired
                    name="email"
@@ -69,15 +74,18 @@ console.log({data,error});
                    <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
                    <FieldError />
                  </TextField>
-                 <div className="flex gap-2">
-                   <Button type="submit">
+                 <div className="w-full">
+                   <Button type="submit" className={'w-full bg-green-900'}>
                      {/* <Check /> */}
-                     Submit
+                     Login
                    </Button>
-                   <Button type="reset" variant="secondary">
+                   {/* <Button type="reset" variant="secondary">
                      Reset
-                   </Button>
+                   </Button> */}
                  </div>
+                 <span className="text-center text-gray-800 font-semibold text-sm">OR continue with</span>
+                 <button className="btn btn-ghost text-xl"><FcGoogle />Continue with google</button>
+                 <p>Don&apos;t have account?<Link href={'/registers'}><span className="text-[14px] text-blue-700">registration here</span></Link></p>
                  </Form>
         </div>
     );

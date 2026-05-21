@@ -1,8 +1,11 @@
 import { ForDetails } from '@/components/AllSharedFunc';
+import Booking from '@/components/Booking';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { CiLock } from 'react-icons/ci';
 import { FaBangladeshiTakaSign } from 'react-icons/fa6';
+import { MdLockOutline } from 'react-icons/md';
 
 const Detailspage = async ({params}) => {
     const {d_id}=await params;
@@ -169,11 +172,18 @@ const Detailspage = async ({params}) => {
             Please login to book this animal.
           </p>
           
-          <button className="w-full bg-[#005c3c] hover:bg-[#00472e] text-white font-semibold py-3.5 px-6 rounded-xl transition-colors duration-300 shadow-sm flex items-center justify-center gap-2 cursor-pointer text-sm md:text-base">
-            {/* Lock Icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Login to Book
-          </button>
+        
+            <li className="w-full  text-white 
+          font-semibold py-3.5 px-6 rounded-xl transition-colors duration-300 shadow-sm 
+          flex items-center justify-center gap-2 cursor-pointer text-sm md:text-base">
+             
+            <Booking></Booking>
+             </li>
+          {/* <button className="w-full bg-[#005c3c] hover:bg-[#00472e] text-white 
+          font-semibold py-3.5 px-6 rounded-xl transition-colors duration-300 shadow-sm 
+          flex items-center justify-center gap-2 cursor-pointer text-sm md:text-base">
+           
+          </button> */}
         </div>
 
       </div>

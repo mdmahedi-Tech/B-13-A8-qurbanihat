@@ -21,5 +21,5 @@ return NextResponse.redirect(new URL('/login', request.url))
 }
 
 export const config = {
-  matcher: ['/allcards','/details/:path']
+  matcher: ['/allcards','/profile','/details/:path']
 }

@@ -27,9 +27,9 @@ const Detailspage = async ({params}) => {
         
         {/* ================= BREADCRUMB ================= */}
         <nav className="text-sm text-gray-500 mb-6 flex items-center gap-2">
-          <span className="hover:underline cursor-pointer">Home</span>
+          <Link href={'/'}><span className="hover:underline cursor-pointer">Home</span></Link>
           <span>&gt;</span>
-          <span className="hover:underline cursor-pointer">All Animals</span>
+         <Link href={'/allcards'}> <span className="hover:underline cursor-pointer">All Animals</span></Link>
           <span>&gt;</span>
           <span className="text-gray-800 font-medium">Deshi Shahi Cow</span>
         </nav>
@@ -179,11 +179,7 @@ const Detailspage = async ({params}) => {
              
             <Booking></Booking>
              </li>
-          {/* <button className="w-full bg-[#005c3c] hover:bg-[#00472e] text-white 
-          font-semibold py-3.5 px-6 rounded-xl transition-colors duration-300 shadow-sm 
-          flex items-center justify-center gap-2 cursor-pointer text-sm md:text-base">
-           
-          </button> */}
+          
         </div>
 
       </div>

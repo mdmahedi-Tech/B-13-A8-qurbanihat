@@ -17,18 +17,19 @@ const Loginpage = () => {
         name,
         email,
         image,
-        password
+        password,
+        callbackURL:'/'
     
     },
 )
 
     console.log({data,error});
     if(error){
-      alert(error.message)
+      toast.error(error.message)
      
     }
     if(data){
-      alert("Registration succesful")
+       toast.success("registration successful")
     //  toast("signup succesful")
     
     }

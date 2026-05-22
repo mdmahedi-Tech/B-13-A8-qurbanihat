@@ -1,13 +1,14 @@
 import React from 'react';
 import logo from '../../public/assets/logo.png'
+import logos from '../../public/assets/logos.jpg'
 import Image from 'next/image';
 const Footer = () => {
     return <>
     <footer className="footer sm:footer-horizontal sm:justify-center lg:justify-between 
-    bg-base-200 text-base-content p-10">
+    bg-green-950 ¥ p-10">
   <aside>
    <Image
-   src={logo}
+   src={logos}
    height={100}
    width={100}
    alt='logo'
@@ -16,29 +17,33 @@ const Footer = () => {
 
    </Image>
     <p>
-      <span className='text-2xl font-bold text-green-950'>AL INSAF GROUP</span>
+      <span className='text-2xl font-bold text-white'>AL INSAF GROUP</span>
       <br />
-     <span className='text-gray-700 font-semibold'> Providing reliable service since 2021</span>
+     <span className='text-white font-semibold'> Providing reliable service since 2021</span>
     </p>
   </aside>
-  <nav>
-    <h6 className="footer-title">Services</h6>
-    <a className="link link-hover">Agro business</a>
-    <a className="link link-hover">Property business</a>
-    <a className="link link-hover">Advertisement</a>
+  <nav className='text-white'>
+    <h6 className="footer-title text-white">Services</h6>
+    <a className="link link-hover text-white">Agro business</a>
+    <a className="link link-hover text-white">Property business</a>
+    <a className="link link-hover text-white">Advertisement</a>
   </nav>
   <nav>
-    <h6 className="footer-title">Company</h6>
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
+    <h6 className="footer-title text-white">Company</h6>
+    <a className="link link-hover text-white">About us</a>
+    <a className="link link-hover text-white">Contact</a>
    
   </nav>
   <nav>
-    <h6 className="footer-title">Legal</h6>
-    <a className="link link-hover">Privacy policy</a>
-    <a className="link link-hover">Cookie policy</a>
+    <h6 className="footer-title text-white">Legal</h6>
+    <a className="link link-hover text-white">Privacy policy</a>
+    <a className="link link-hover text-white">Cookie policy</a>
   </nav>
+  
 </footer>
+<div>
+  <h1 className='text-center bg-green-950 text-white pb-8 lg:pb-4'> <p>Copyright © {new Date().getFullYear()} - Developed By MD.MAHEDI HASAN</p></h1>
+ </div>
     </>
 };
 

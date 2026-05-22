@@ -2,12 +2,18 @@
 import {Envelope} from "@gravity-ui/icons";
 import {Button, Input, Label, Modal, Surface, TextField} from "@heroui/react";
 import { MdLockOutline } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const Booking = () => {
+  const hndletoast=(e)=>{
+    e.preventDefault()
+    
+     toast.success('congratulations! booking successful');
+  }
     return (
          <Modal>
       <Button className={'bg-[#005c3c] text-2xl w-full flex items-center lg:py-8'}>
-        <MdLockOutline className='w-6 h-6 text-gray-300'/> login to book</Button>
+         Booking Form</Button>
       <Modal.Backdrop>
         <Modal.Container placement="auto">
           <Modal.Dialog className="sm:max-w-md">
@@ -21,7 +27,7 @@ const Booking = () => {
             </Modal.Header>
             <Modal.Body className="p-6">
               <Surface variant="default">
-                <form className="flex flex-col gap-4">
+                <form onSubmit={hndletoast} className="flex flex-col gap-4">
                   <TextField className="w-full" name="name" type="text" variant="secondary">
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />

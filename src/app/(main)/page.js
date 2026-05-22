@@ -2,6 +2,7 @@ import { ForHomePage } from "@/components/AllSharedFunc";
 import HomeCards from "@/components/HomeCards";
 import Image from "next/image";
 import Link from "next/link";
+import { ToastContainer } from "react-toastify";
 // const fetchdata=async ()=>{
 //   const res=await fetch('http://localhost:5000/products')
 //   return res.json();
@@ -22,6 +23,7 @@ export default async function Home() {
       products.map(product=><HomeCards key={product.id}product={product}></HomeCards>)
     }
    </div>
+    <ToastContainer />
    </>
   );
 }

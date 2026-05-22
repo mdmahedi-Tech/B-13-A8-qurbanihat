@@ -10,8 +10,8 @@ const Banner = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
           
           {/* Left Content */}
-          <div>
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900">
+          <div className='lg:pt-1 pt-10'>
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900 sm:pt-10">
               Book Your Perfect{" "}
               <span className="text-gray-900">Qurbani Animal</span>{" "}
               Easily From <br />
@@ -24,7 +24,7 @@ const Banner = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8">
-              <Link href="/animals">
+              <Link href="/allcards">
                 <button className="bg-green-700 hover:bg-green-800 transition text-white px-6 py-3 rounded-lg font-semibold">
                   Browse Animals →
                 </button>

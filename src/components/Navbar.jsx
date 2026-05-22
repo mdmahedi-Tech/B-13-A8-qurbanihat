@@ -6,6 +6,7 @@ import { GiCow } from 'react-icons/gi';
 import { authClient } from '@/lib/auth-client';
 import { FaCow, FaUser, FaUserCheck } from 'react-icons/fa6';
 import { Avatar } from '@heroui/react';
+import { TiHomeOutline } from 'react-icons/ti';
 
 
 const Navbar = () => {
@@ -33,10 +34,10 @@ const Navbar = () => {
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 py-10 my-10 w-52 p-2 shadow">
        
-        <Navlink className={'font-semibold'} href={'/'}>Home</Navlink>
+        <Navlink className={'font-semibold flex'} href={'/'}>Home</Navlink>
          <Navlink className={'font-semibold'} href={'/allcards'}>All Animals</Navlink>
          <Navlink className={'font-semibold'} href={'/about'}>About us</Navlink>
-         <Navlink className={'font-semibold'} href={'/profile'}>Profile</Navlink>
+         { user ? (<Navlink className={'font-semibold'} href={'/profile'}>Profile</Navlink>):''}
       </ul>
     </div>
     {/* gorup name */}
@@ -47,11 +48,11 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal space-x-3">
-       <Navlink className={'font-semibold'} href={'/'}>Home</Navlink>
+       <Navlink className={'font-semibold flex'} href={'/'}>Home</Navlink>
      
       <Navlink className={'font-semibold'} href={'/allcards'}>All Animals</Navlink>
       <Navlink className={'font-semibold'} href={'/about'}>About us</Navlink>
-      <Navlink className={'font-semibold'} href={'/profile'}>Profile</Navlink>
+    { user ? (<Navlink className={'font-semibold'} href={'/profile'}>Profile</Navlink>):''}
     </ul>
   </div>
   <div className="navbar-end space-x-2">

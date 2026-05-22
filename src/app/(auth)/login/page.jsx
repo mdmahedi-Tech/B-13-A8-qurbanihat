@@ -4,6 +4,7 @@ import {Check} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const Resgisterpage = () => {
 
@@ -34,10 +35,11 @@ console.log("data",data)
 )
 console.log({data,error});
     if(error){
-      alert(error.message)
+      // alert(error.message)
+      toast.error(error.message)
     }
     if(data){
-      alert("login successful")
+     toast.success("login successful")
     }
     
   };
@@ -96,10 +98,10 @@ console.log({data,error});
                    </Button> */}
                  </div>
                  <span className="text-center text-gray-800 font-semibold text-sm">OR continue with</span>
-                
+                 <button onClick={handlegoogle} className="btn btn-ghost text-xl"><FcGoogle />Continue with google</button>
                  <p>Don&apos;t have account?<Link href={'/registers'}><span className="text-[14px] text-blue-700">registration here</span></Link></p>
                  </Form>
-                  <button onClick={handlegoogle} className="btn btn-ghost text-xl"><FcGoogle />Continue with google</button>
+                 
         </div>
     );
 };

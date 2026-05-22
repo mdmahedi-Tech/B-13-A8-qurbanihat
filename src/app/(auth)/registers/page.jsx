@@ -3,9 +3,11 @@ import { authClient } from "@/lib/auth-client";
 import {Check} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 import { redirect } from "next/dist/server/api-utils";
+import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
 const Loginpage = () => {
+  const router = useRouter();
     const onSubmit =async (e) => {
     e.preventDefault();
     const name=e.target.name.value;
@@ -31,6 +33,7 @@ const Loginpage = () => {
     if(data){
        toast.success("registration successful")
     //  toast("signup succesful")
+    router.push("/");
     
     }
     

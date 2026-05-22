@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../public/assets/logo.png'
 import logos from '../../public/assets/logos.jpg'
+import circlelogo from '../../public/assets/circle logo.jpg'
 import Image from 'next/image';
 const Footer = () => {
     return <>

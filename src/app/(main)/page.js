@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ToastContainer } from "react-toastify";
 // const fetchdata=async ()=>{
-//   const res=await fetch('http://localhost:5000/products')
+//   const res=await fetch('https://json-server-4u0i.onrender.com/products')
 //   return res.json();
 // }
 

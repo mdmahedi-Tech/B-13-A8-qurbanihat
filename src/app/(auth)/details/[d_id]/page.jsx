@@ -12,7 +12,7 @@ const Detailspage = async ({params}) => {
     console.log(d_id)
     // api fetch
   const ForDetails=async ()=>{
-  const res=await fetch(`http://localhost:5000/products`)
+  const res=await fetch(`https://json-server-4u0i.onrender.com/products`)
   return res.json();
 }
     const products=await ForDetails();

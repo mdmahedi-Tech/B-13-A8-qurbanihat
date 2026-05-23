@@ -43,7 +43,7 @@ const Navbar = () => {
     {/* gorup name */}
     <a className="btn btn-ghost sm:text-sm md:text-xl lg:text-xl font-bold">
      
-    <span className='text-green-900 font-bold'>AL INSAF GROUP</span>
+    <span className='text-green-900 font-bold'>AL INSAF</span>
     </a>
   </div>
   <div className="navbar-center hidden lg:flex">

@@ -43,8 +43,8 @@ const Navbar = () => {
     {/* gorup name */}
     <a className="btn btn-ghost sm:text-sm md:text-xl lg:text-xl font-bold">
      
-    <span className='text-indigo-950'>AL INSAF</span>
-     <span className='text-green-900'>AGRO FARM</span></a>
+    <span className='text-green-900 font-bold'>AL INSAF GROUP</span>
+    </a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal space-x-3">
